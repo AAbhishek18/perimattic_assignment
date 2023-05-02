@@ -58,7 +58,7 @@ app.listen(process.env.PORT||3000,()=>{
 //upload data to mysql database=============================
 app.get('/getdata', async function (req, res)  {
     const data = await axios.get('https://api.publicapis.org/entries')
-    console.log(data.data.entries)
+    //console.log(data.data.entries)
     const {entries} = data.data
     entries.forEach(async (element) => {
         const {API,Description,Auth,HTTPS,Cors,Link,Category} = element
